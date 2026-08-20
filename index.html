@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A responsive temperature converter for Celsius, Fahrenheit, and Kelvin."
+    >
+
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="converter-card" aria-labelledby="page-title">
+
+            <div class="card-header">
+                <span class="eyebrow">Veda</span>
+
+                <h1 id="page-title">
+                    Temperature Converter
+                </h1>
+
+                <p>
+                    Convert temperatures instantly between
+                    Celsius, Fahrenheit, and Kelvin.
+                </p>
+            </div>
+
+
+            <form id="converter-form" class="converter-form" novalidate>
+
+                <!-- Temperature Input -->
+                <div class="field-group">
+
+                    <label for="temperature">
+                        Temperature
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <input
+                            id="temperature"
+                            name="temperature"
+                            type="number"
+                            inputmode="decimal"
+                            step="any"
+                            placeholder="Enter a temperature"
+                            autocomplete="off"
+                            aria-describedby="error-message"
+                        >
+
+                        <span
+                            id="input-symbol"
+                            class="unit-symbol"
+                        >
+                            °C
+                        </span>
+
+                    </div>
+
+                    <p
+                        id="error-message"
+                        class="error-message"
+                        role="alert"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- Unit Selection -->
+                <div class="field-group">
+
+                    <label for="unit">
+                        Convert from
+                    </label>
+
+                    <select id="unit" name="unit">
+
+                        <option value="celsius">
+                            Celsius (°C)
+                        </option>
+
+                        <option value="fahrenheit">
+                            Fahrenheit (°F)
+                        </option>
+
+                        <option value="kelvin">
+                            Kelvin (K)
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Reset Button -->
+                <button
+                    class="reset-button"
+                    type="button"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+            </form>
+
+
+            <!-- Conversion Results -->
+            <div class="results" aria-live="polite">
+
+                <article class="result-card">
+
+                    <div>
+                        <span class="result-label">
+                            Celsius
+                        </span>
+
+                        <span class="result-unit">
+                            °C
+                        </span>
+                    </div>
+
+                    <strong id="celsius-result">
+                        —
+                    </strong>
+
+                </article>
+
+
+                <article class="result-card">
+
+                    <div>
+                        <span class="result-label">
+                            Fahrenheit
+                        </span>
+
+                        <span class="result-unit">
+                            °F
+                        </span>
+                    </div>
+
+                    <strong id="fahrenheit-result">
+                        —
+                    </strong>
+
+                </article>
+
+
+                <article class="result-card">
+
+                    <div>
+                        <span class="result-label">
+                            Kelvin
+                        </span>
+
+                        <span class="result-unit">
+                            K
+                        </span>
+                    </div>
+
+                    <strong id="kelvin-result">
+                        —
+                    </strong>
+
+                </article>
+
+            </div>
+
+
+            <footer class="card-footer">
+
+                <span>Fast</span>
+                <span>•</span>
+                <span>Accurate</span>
+                <span>•</span>
+                <span>Responsive</span>
+                <span>•</span>
+                <span>By Aditya Pandey</span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
